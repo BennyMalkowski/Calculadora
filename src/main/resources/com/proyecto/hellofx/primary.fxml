@@ -11,11 +11,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="455.0" prefWidth="347.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.hellofx.PrimaryController">
+<VBox alignment="CENTER" prefHeight="455.0" prefWidth="347.0" spacing="20.0" styleClass="fondo" stylesheets="@mycss.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.hellofx.PrimaryController">
    <children>
-      <Pane prefHeight="642.0" prefWidth="307.0">
+      <Pane prefHeight="642.0" prefWidth="307.0" stylesheets="@mycss.css">
          <children>
-            <GridPane layoutY="112.0" prefHeight="228.0" prefWidth="307.0">
+            <GridPane layoutY="112.0" prefHeight="228.0" prefWidth="307.0" stylesheets="@mycss.css">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -29,35 +29,86 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="etiqueta7" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="7" />
-                  <Button fx:id="etiqueta8" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="8" GridPane.columnIndex="1" />
-                  <Button fx:id="etiqueta9" layoutX="86.0" layoutY="10.0" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="9" GridPane.columnIndex="2" />
-                  <Button fx:id="etiquetaSuma" layoutX="163.0" layoutY="10.0" mnemonicParsing="false" onAction="#suma" prefHeight="62.0" prefWidth="93.0" text="+" GridPane.columnIndex="3" />
+                  <Button fx:id="etiqueta7" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="7">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiqueta8" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="8" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiqueta9" layoutX="86.0" layoutY="10.0" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="9" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiquetaSuma" layoutX="163.0" layoutY="10.0" mnemonicParsing="false" onAction="#suma" prefHeight="62.0" prefWidth="93.0" stylesheets="@mycss.css" text="+" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
                   <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="93.0" text="Button" GridPane.rowIndex="1" />
                   <Button layoutX="86.0" layoutY="10.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="93.0" text="Button" GridPane.rowIndex="1" />
                   <Button layoutX="163.0" layoutY="10.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="93.0" text="Button" GridPane.rowIndex="1" />
-                  <Button fx:id="etiqueta4" layoutX="240.0" layoutY="10.0" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="4" GridPane.rowIndex="1" />
-                  <Button fx:id="etiqueta5" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="etiqueta6" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="etiquetaResta" mnemonicParsing="false" onAction="#resta" prefHeight="62.0" prefWidth="93.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Button fx:id="etiqueta1" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="1" GridPane.rowIndex="2" />
-                  <Button fx:id="etiqueta2" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="etiqueta3" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="etiquetaMultiplicacion" mnemonicParsing="false" onAction="#multiplicacion" prefHeight="62.0" prefWidth="93.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <Button fx:id="etiqueta0" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Button fx:id="etiquetaComa" mnemonicParsing="false" onAction="#coma" prefHeight="62.0" prefWidth="93.0" text="," GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <Button fx:id="etiquetaDivision" mnemonicParsing="false" onAction="#division" prefHeight="62.0" prefWidth="93.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <Button fx:id="etiquetaBorrar" layoutX="163.0" layoutY="182.0" mnemonicParsing="false" onAction="#Borrar" prefHeight="62.0" prefWidth="93.0" text="CL" GridPane.rowIndex="3" />
+                  <Button fx:id="etiqueta4" layoutX="240.0" layoutY="10.0" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiqueta5" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiqueta6" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiquetaResta" mnemonicParsing="false" onAction="#resta" prefHeight="62.0" prefWidth="93.0" stylesheets="@mycss.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiqueta1" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiqueta2" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiqueta3" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiquetaMultiplicacion" mnemonicParsing="false" onAction="#multiplicacion" prefHeight="62.0" prefWidth="93.0" stylesheets="@mycss.css" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiqueta0" mnemonicParsing="false" onAction="#alPulsar" prefHeight="62.0" prefWidth="93.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiquetaComa" mnemonicParsing="false" onAction="#coma" prefHeight="62.0" prefWidth="93.0" text="," GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiquetaDivision" mnemonicParsing="false" onAction="#division" prefHeight="62.0" prefWidth="93.0" stylesheets="@mycss.css" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="etiquetaBorrar" layoutX="163.0" layoutY="182.0" mnemonicParsing="false" onAction="#Borrar" prefHeight="62.0" prefWidth="93.0" stylesheets="@mycss.css" text="CL" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
                </children>
             </GridPane>
             <Text layoutX="2.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Casio FX-570ES PLUS" />
-            <Button fx:id="etiquetaIgual" layoutY="340.0" mnemonicParsing="false" onAction="#igual" prefHeight="62.0" prefWidth="307.0" text="=" />
-            <Text fx:id="operaciones" layoutX="271.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-            <TextField fx:id="resultado" alignment="BOTTOM_RIGHT" layoutY="32.0" prefHeight="71.0" prefWidth="307.0">
+            <Button fx:id="etiquetaIgual" layoutY="351.0" mnemonicParsing="false" onAction="#igual" prefHeight="62.0" prefWidth="307.0" stylesheets="@mycss.css" text="=">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Button>
+            <TextField fx:id="resultado" alignment="BOTTOM_RIGHT" layoutY="32.0" prefHeight="71.0" prefWidth="307.0" stylesheets="@mycss.css">
                <font>
                   <Font size="28.0" />
                </font>
             </TextField>
+            <Text fx:id="operaciones" layoutX="271.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" />
          </children>
       </Pane>
    </children>

@@ -57,13 +57,14 @@ public class PrimaryController {
         Button botonPulsado = (Button) event.getSource(); //ayuda a determinar qué componente disparó un evento.
         String numero = botonPulsado.getText(); //recogemos el texto del boton pulsado
         resultado.setText(resultado.getText() + numero);//En resultado, ponemos (el texto que hay escrito, lo concatena con el siguiente número)
+        operaciones.setText((operaciones.getText() + numero));
     }
 
     public void recogerDatos(String operacion) { //creamos un metodo que recoge datos, y le pasamos un string con la operacion
         data = Float.parseFloat(resultado.getText()); //pasamos el String del resultado a float
         operation = operacion; //igualamos la operacion a operation
         operaciones.setText(operaciones.getText() + operation);//En la caja de operaciones, ponemos (la operacion que hay escrita, lo concatena con la siguiente operacion)
-        resultado.setText("holi");
+        resultado.setText("");//aqui pondremos la operacion que se le haya pasado
 
     }
 
@@ -103,7 +104,7 @@ public class PrimaryController {
     @FXML
     private void igual(ActionEvent event) {
         Float secondOperand; //añadimos un segundo operador.
-        
+
         try {
             secondOperand = Float.parseFloat(resultado.getText());//Convertimos el String del resultado en Float para poder hacer las operaciones.
             switch (operation) {  //paramos operation por un switch
@@ -112,25 +113,30 @@ public class PrimaryController {
                     Float resulFloat = data + secondOperand; //suma los dos datos
                     resultado.setText(String.valueOf(resulFloat));//Pasamos el resultado de ambos datos a un String de nuevo.
                     break;
-                     case "-":
-                    
+                case "-":
+                    resulFloat = data - secondOperand; //resta los dos datos
+                    resultado.setText(String.valueOf(resulFloat));//Pasamos el resultado de ambos datos a un String de nuevo.
                     break;
-                     case "*":
-                    
-                    break;
-                     case "/":
-                    
+                case "*":
+                    resulFloat = data * secondOperand; //multiplica los dos datos
+                    resultado.setText(String.valueOf(resulFloat));//Pasamos el resultado de ambos datos a un String de nuevo.                    break;
+                case "/":
+                    resulFloat = 0f;
+                    try {
+                        resulFloat = data / secondOperand; //divide los dos datos
+                    } catch (Exception e) {
+                        resultado.setText("ERROR"); //en caso de que algo vaya mal, indicamos error
+                    }
+                    resultado.setText(String.valueOf(resulFloat));//Pasamos el resultado de ambos datos a un String de nuevo.
                     break;
                 default:
                     throw new AssertionError();
+
             }
-            
-            
-            
+            operaciones.setText(""); //una vez pasado por el twitch, seteamos en operaciones.
         } catch (Exception e) {
+             secondOperand = 0.0f; //si algo falla
         }
-        
-        
-        
+
     }
 }

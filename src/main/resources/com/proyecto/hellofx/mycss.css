@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20 abr 2022, 10:27:22
+    Author     : DAW
+*/
+
+.fondo{
+    -fx-background-color:#adb5bd;
+}
+
+.button{
+    -fx-background-color:#dee2e6;
+    -fx-border-color: black;
+}
+.button:hover{
+    -fx-text-fill: black;
+    -fx-background-color: #ffcb69;
+}
+.button:active{
+    -fx-text-fill: white;
+}
+
+/* ASIGNAMOS EL COLOR DE FONDO UTILIZANDO EL ID DE CADA COMPONENTE */
+/*#division,#multiplicacion{
+    -fx-background-color:#36HHHH;
+}*/
+
+/* ASIGNAMOS EL COLOR DE FONDO UTILIZANDO UNA NUEVA CLASE "OPERACIONES" ESTÁ ASIGNADA A LOS BOTONES DE SUMA Y DIVISION */
+/*.operaciones{
+    -fx-background-color:#36FFFF;
+}*/
+
+#etiquetaSuma,#etiquetaResta, #etiquetaMultiplicacion, #etiquetaDivision{
+    -fx-background-color:#495057;
+    -fx-text-fill: white;
+}
+
+
+#etiquetaSuma:hover,#etiquetaResta:hover, #etiquetaMultiplicacion:hover, #etiquetaDivision:hover{
+    -fx-text-fill: black;
+    -fx-background-color: #ffcb69;
+}
+/*#igual{
+    -fx-background-color:#ffa942;
+    -fx-border-color:none;
+}*/
+
+#resultado{
+    -fx-background-color:#e9ecef;
+    -fx-text-fill:black;
+    -fx-border-color: black;
+}
